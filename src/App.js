@@ -14,10 +14,15 @@ class Card extends React.Component{
   {
     const profile = this.props;
     return (
-      <div className='App'>
+      <div className='mainContainer'>
         <img src={profile.avatar_url}/>    
-        <div className='info'>{profile.login}</div>
-        <div className='bio'>{profile.bio}</div>
+        <div >{profile.login}</div>
+        <div >{profile.bio}</div>
+        <div >{`Public Repository:${profile.public_repos}`}</div>
+        <div >{`Followers: ${profile.followers}`}</div>
+        <div >{`Following: ${profile.following}`}</div>
+ 
+
         </div>
     );
     }
@@ -35,12 +40,14 @@ class Card extends React.Component{
     {
       return(
         <form onSubmit={this.handleSubmit}>
+          <div className="formContainer">
           <input type= 'text' 
           value={this.state.userName} 
           onChange={event => this.setState({userName: event.target.value})}
           placeholder='Enter a GitHub Username' 
           required/>
-          <button >getData</button>
+          <button className="btncls">getData</button>
+          </div>
         </form>
       );
     }
@@ -57,11 +64,9 @@ render()
 {
   return (
     <div className="App">
-      <div className='container'>
         <p>{this.props.title}</p>
         <Form submit={this.addNewProfile}/>
         <CardList profiles={this.state.profiles}/>
-      </div>
     </div>
   );
   }
