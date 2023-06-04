@@ -7,7 +7,7 @@ img {
   padding: 5px;
   width: 100px;
 }
-.App-container {
+.container {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -20,5 +20,5 @@ img {
 .mainContainer{
 border-style: solid;
 border-width: medium;
-background-color : blue;
+background-color : rgb(211, 206, 206);
 }
