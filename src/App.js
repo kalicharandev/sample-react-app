@@ -46,7 +46,7 @@ class Card extends React.Component{
           onChange={event => this.setState({userName: event.target.value})}
           placeholder='Enter a GitHub Username' 
           required/>
-          <button className="btncls">getData</button>
+          <button className="btncls">GetData</button>
           </div>
         </form>
       );

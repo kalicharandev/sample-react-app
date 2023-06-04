@@ -22,3 +22,7 @@ border-style: solid;
 border-width: medium;
 background-color : rgb(211, 206, 206);
 }
+.btncls{
+  background-color: black;
+  color: white;
+}
